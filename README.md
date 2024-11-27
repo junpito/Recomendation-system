@@ -153,11 +153,12 @@ Pendekatan ini memanfaatkan CountVectorizer untuk mengubah fitur teks dari data 
 Collaborative Filtering berbasis Singular Value Decomposition (SVD) adalah pendekatan matriks untuk menghasilkan rekomendasi berdasarkan data interaksi pengguna terhadap film, seperti rating. Teknik ini memanfaatkan dekomposisi matriks untuk menemukan pola laten yang menghubungkan pengguna dengan item (film), tanpa memerlukan informasi tambahan dari konten film.
 berikut adalah rumus SVD:
         $$\mathbf{R}_{m \times n} = \mathbf{U}_{m \times k} \cdot \boldsymbol{\Sigma}_{k \times k} \cdot \mathbf{V}^T_{k \times n}$$
-dimana:
-$$\mathbf{R}_{m \times n}:$$ Matriks R berukuran m x n
-$$\mathbf{U}_{m \times k}:$$ Matriks U berukuran m x k
-$$\boldsymbol{\Sigma}_{k \times k}:$$ MMariks diagonal berukuran k x k
-$$\mathbf{V}^T_{k \times n}:$$ Matriks v berukuran k x n
+di mana:
+    - R (m x n): Matriks R berukuran m x n
+    - U (m x k): Matriks U berukuran m x k
+    - Σ (k x k): Matriks diagonal berukuran k x k
+    - V^T (k x n): Matriks V berukuran k x n
+
 - Dalam penerapannya Model SVD diinisialisasi menggunakan library `Surprise`
 - Kelebihan dan kekurangan:
     - Kelebihan : 
@@ -201,9 +202,9 @@ rumus RMSE adalah sebagai berikut:
 $$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}$$
 
 Keterangan:
-- $$y_i:$$ Rating sebenarnya.
-- $$\hat{y}_i:$$  Rating yang diprediksi.
-- $$n:$$ Jumlah sampel.
+- y_i: Rating sebenarnya.
+- ŷ_i: Rating yang diprediksi.
+- n: Jumlah sampel.
 
 **Hasil evaluasi dengan RMSE pada Collaborative Filtering** menunjukkan nilai RMSE  (0.9810 Fold 1) (0.9818 Fold 2) (0.9805 Fold 3) (0.9891 Fold 4) (0.9944 Fold 5) dengan rata-rata **0.9853**. Nilai RMSE yang rendah ini menunjukkan bahwa model mampu memprediksi rating pengguna dengan cukup akurat, yang berarti rekomendasi yang diberikan berdasarkan pola rating pengguna sangat relevan.
 
